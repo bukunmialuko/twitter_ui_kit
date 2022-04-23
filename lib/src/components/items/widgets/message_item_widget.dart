@@ -26,6 +26,7 @@ class MessageItemWidget extends StatelessWidget {
                   child: ImageryWidget(
                     width: 48.w,
                     height: 48.w,
+                    color: AppColors.twitterGrey100,
                   ),
                 ),
                 Expanded(

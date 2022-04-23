@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:twitter_ui_kit/src/components/items/widgets/feed_item_widget.dart';
 
 import '../../res/colors.dart';
 import 'widgets/actions_item_widget.dart';
@@ -35,7 +36,9 @@ class _ItemsRootWidgetState extends State<ItemsRootWidget> {
               SizedBox(height: 30.h),
               const MessageItemWidget(isRead: false),
               SizedBox(height: 30.h),
-              const ActionsItemWidget()
+              const ActionsItemWidget(),
+              SizedBox(height: 30.h),
+              const FeedItemWidget()
             ],
           ),
         ),

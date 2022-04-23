@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../res/colors.dart';
 import '../../menu/widgets/imagery_widget.dart';
+import 'dot_widget.dart';
 
 class ActionsItemWidget extends StatelessWidget {
   const ActionsItemWidget({Key? key}) : super(key: key);
@@ -26,6 +27,7 @@ class ActionsItemWidget extends StatelessWidget {
               child: ImageryWidget(
                 width: 48.w,
                 height: 48.w,
+                color: AppColors.twitterGrey100,
               ),
             ),
             Expanded(
@@ -45,7 +47,7 @@ class ActionsItemWidget extends StatelessWidget {
                           fontWeight: FontWeight.w700,
                         ),
                       ),
-                      _buildDot(),
+                      const DotWidget(),
                       Text(
                         'Timestamp',
                         style: TextStyle(
@@ -115,16 +117,6 @@ class ActionsItemWidget extends StatelessWidget {
         ),
         SizedBox(width: 15.w)
       ],
-    );
-  }
-
-  _buildDot() {
-    return Container(
-      width: 2.w,
-      height: 2.w,
-      margin: EdgeInsets.only(left: 6.w, right: 6.w),
-      decoration:
-          const BoxDecoration(color: Colors.black, shape: BoxShape.circle),
     );
   }
 }
