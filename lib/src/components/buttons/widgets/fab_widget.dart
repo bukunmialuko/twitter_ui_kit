@@ -4,17 +4,13 @@ import 'package:flutter_svg/svg.dart';
 import 'package:twitter_ui_kit/src/res/colors.dart';
 
 class FabWidget extends StatelessWidget {
-  final Function? onPressed;
+  final VoidCallback? onPressed;
   const FabWidget({Key? key, this.onPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        if (onPressed != null) {
-          onPressed!();
-        }
-      },
+      onTap: onPressed,
       child: Container(
         width: 48.w,
         height: 48.w,

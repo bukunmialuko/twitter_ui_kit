@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get_it/get_it.dart';
 import 'package:twitter_ui_kit/src/components/items/widgets/feed_item_widget.dart';
 import 'package:twitter_ui_kit/src/components/items/widgets/thumbnail_item_widget.dart';
 
+import '../../navigation/navigation_service.dart';
 import '../../res/colors.dart';
 import 'widgets/actions_item_widget.dart';
 import 'widgets/message_item_widget.dart';
@@ -51,7 +53,9 @@ class _ItemsRootWidgetState extends State<ItemsRootWidget>
               ),
               SizedBox(height: 30.h),
               NavItemWidget(
-                onClick: () {},
+                onClick: () {
+                  GetIt.I.get<NavigationService>().back();
+                },
                 iconUri: 'assets/svg/feed.svg',
                 title: 'Home',
               ),

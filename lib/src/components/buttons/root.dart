@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get_it/get_it.dart';
 
+import '../../navigation/navigation_service.dart';
 import '../../res/colors.dart';
 import 'widgets/fab_widget.dart';
 import 'widgets/twitter_button.dart';
@@ -30,7 +32,9 @@ class _ButtonsRootWidgetState extends State<ButtonsRootWidget> {
                 width: 66.w,
                 height: 36.w,
                 text: 'Button',
-                onPressed: () {},
+                onPressed: () {
+                  GetIt.I.get<NavigationService>().back();
+                },
               )
             ],
           ),
