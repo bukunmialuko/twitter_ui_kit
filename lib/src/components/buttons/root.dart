@@ -26,7 +26,11 @@ class _ButtonsRootWidgetState extends State<ButtonsRootWidget> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 20.h),
-              const FabWidget(),
+              FabWidget(
+                onPressed: () {
+                  GetIt.I.get<NavigationService>().back();
+                },
+              ),
               SizedBox(height: 10.h),
               TweeterButton(
                 width: 66.w,
