@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get_it/get_it.dart';
 import 'package:twitter_ui_kit/src/components/imagery/widgets/thumbnail_widget.dart';
 import 'package:twitter_ui_kit/src/res/colors.dart';
 
+import '../../navigation/navigation_service.dart';
 import 'widgets/avatar_widget.dart';
 import 'widgets/feed_thumbnail_widget.dart';
 import 'widgets/hero_widget.dart';
@@ -27,7 +29,11 @@ class _ImageryRootWidgetState extends State<ImageryRootWidget> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const HeroWidget(),
+                GestureDetector(
+                    onTap: () {
+                      GetIt.I.get<NavigationService>().back()
+                    },
+                    child: const HeroWidget()),
                 SizedBox(height: 26.h),
                 const SpacesWidget(),
                 SizedBox(height: 26.h),
