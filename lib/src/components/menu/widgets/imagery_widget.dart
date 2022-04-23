@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:twitter_ui_kit/src/res/colors.dart';
 
 class ImageryWidget extends StatelessWidget {
