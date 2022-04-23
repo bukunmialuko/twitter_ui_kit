@@ -47,7 +47,7 @@ class AppRootWidget extends StatelessWidget {
                       routeName: MobileRoutes.imageryRoot,
                     );
               },
-              title: 'Screens',
+              title: 'App / Screens',
               iconUri: 'assets/svg/list.svg',
             ),
           ],
