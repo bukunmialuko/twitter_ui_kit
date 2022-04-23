@@ -7,8 +7,9 @@ class AvatarWrapWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: 68.h,
+      padding: EdgeInsets.only(left: 12.w),
       child: Row(
         children: [
           ImageryWidget(

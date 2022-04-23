@@ -7,8 +7,9 @@ class FollowersFollowing extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: 40.h,
+      padding: EdgeInsets.only(left: 12.w),
       child: Row(
         children: [
           Text(

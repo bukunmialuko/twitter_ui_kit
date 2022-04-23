@@ -6,8 +6,9 @@ class MenuAuthorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: 60.h,
+      padding: EdgeInsets.only(left: 12.w),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
