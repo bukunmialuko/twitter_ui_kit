@@ -7,6 +7,7 @@ import '../../res/colors.dart';
 import 'widgets/actions_item_widget.dart';
 import 'widgets/message_item_widget.dart';
 import 'widgets/nav_item_widget.dart';
+import 'widgets/tabs_widget.dart';
 
 class ItemsRootWidget extends StatefulWidget {
   const ItemsRootWidget({Key? key}) : super(key: key);
@@ -15,7 +16,22 @@ class ItemsRootWidget extends StatefulWidget {
   State<ItemsRootWidget> createState() => _ItemsRootWidgetState();
 }
 
-class _ItemsRootWidgetState extends State<ItemsRootWidget> {
+class _ItemsRootWidgetState extends State<ItemsRootWidget>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+  static const List<Tab> myTabs = <Tab>[
+    Tab(text: 'Nav link'),
+    Tab(text: 'Nav link'),
+    Tab(text: 'Nav link'),
+    Tab(text: 'Nav link'),
+    Tab(text: 'Nav link'),
+  ];
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(vsync: this, length: myTabs.length);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,6 +42,13 @@ class _ItemsRootWidgetState extends State<ItemsRootWidget> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              SizedBox(
+                height: 50.h,
+                child: TabsWidget(
+                  controller: _tabController,
+                  tabs: myTabs,
+                ),
+              ),
               SizedBox(height: 30.h),
               NavItemWidget(
                 onClick: () {},
