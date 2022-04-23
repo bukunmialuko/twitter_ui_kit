@@ -7,6 +7,7 @@ class AppColors {
   static const Color twitterWhite100 = Color(0XFFFFFFFF);
   static const Color twitterGrey100 = Color(0XFFCBD0D9);
   static const Color twitterCharcoal100 = Color(0XFF3A3D45);
-  static const Color twitterBlack100 = Color(0XFF3A3D45);
+  static const Color twitterBlack100 = Color(0XFF000000);
   static const Color twitterBlue100 = Color(0XFF4A98E9);
+  static const Color twitterStale100 = Color(0XFF555A64);
 }
