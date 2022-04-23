@@ -31,7 +31,7 @@ class _ImageryRootWidgetState extends State<ImageryRootWidget> {
               children: [
                 GestureDetector(
                     onTap: () {
-                      GetIt.I.get<NavigationService>().back()
+                      GetIt.I.get<NavigationService>().back();
                     },
                     child: const HeroWidget()),
                 SizedBox(height: 26.h),

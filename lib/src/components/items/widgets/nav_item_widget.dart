@@ -3,12 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:twitter_ui_kit/src/res/colors.dart';
 
-class MenuItemWidget extends StatelessWidget {
+class NavItemWidget extends StatelessWidget {
   final String iconUri;
   final String title;
   final Function onClick;
 
-  const MenuItemWidget(
+  const NavItemWidget(
       {Key? key,
       required this.iconUri,
       required this.title,
@@ -23,8 +23,9 @@ class MenuItemWidget extends StatelessWidget {
       },
       child: Container(
         height: 48.h,
+        width: 362.w,
         decoration: const BoxDecoration(
-          color: Colors.transparent,
+          color: Colors.white,
           // border: Border(
           //   bottom: BorderSide(
           //     color: const Color(0xffD3D3D3),
@@ -36,7 +37,7 @@ class MenuItemWidget extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.only(
-                // left: 12.w,
+                left: 12.w,
                 right: 10.w,
                 top: 12.w,
                 bottom: 12.w,

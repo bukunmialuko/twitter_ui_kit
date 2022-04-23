@@ -4,7 +4,7 @@ import 'package:get_it/get_it.dart';
 import 'package:twitter_ui_kit/src/navigation/navigation_service.dart';
 
 import '../routes/routes.dart';
-import 'menu/widgets/menu_item_widget.dart';
+import 'items/widgets/nav_item_widget.dart';
 
 class ComponentRootWidget extends StatelessWidget {
   const ComponentRootWidget({Key? key}) : super(key: key);
@@ -23,27 +23,41 @@ class ComponentRootWidget extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          MenuItemWidget(
-            onClick: () {
-              GetIt.I.get<NavigationService>().to(
-                    routeName: MobileRoutes.menuRoot,
-                  );
-            },
-            title: 'Menu',
-            iconUri: 'assets/svg/list.svg',
-          ),
-          MenuItemWidget(
-            onClick: () {
-              GetIt.I.get<NavigationService>().to(
-                    routeName: MobileRoutes.imageryRoot,
-                  );
-            },
-            title: 'Imagery',
-            iconUri: 'assets/svg/list.svg',
-          ),
-        ],
+      body: SingleChildScrollView(
+        padding: EdgeInsets.only(left: 20.w),
+        child: Column(
+          children: [
+            NavItemWidget(
+              onClick: () {
+                GetIt.I.get<NavigationService>().to(
+                      routeName: MobileRoutes.menuRoot,
+                    );
+              },
+              title: 'Menu',
+              iconUri: 'assets/svg/list.svg',
+            ),
+            SizedBox(height: 10.h),
+            NavItemWidget(
+              onClick: () {
+                GetIt.I.get<NavigationService>().to(
+                      routeName: MobileRoutes.imageryRoot,
+                    );
+              },
+              title: 'Imagery',
+              iconUri: 'assets/svg/list.svg',
+            ),
+            SizedBox(height: 10.h),
+            NavItemWidget(
+              onClick: () {
+                GetIt.I.get<NavigationService>().to(
+                      routeName: MobileRoutes.itemsRoot,
+                    );
+              },
+              title: 'Items',
+              iconUri: 'assets/svg/list.svg',
+            ),
+          ],
+        ),
       ),
     );
   }
