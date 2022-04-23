@@ -29,7 +29,7 @@ class HeroWidget extends StatelessWidget {
                 ),
                 maxLines: 2,
               ),
-              const SizedBox(height: 4),
+              SizedBox(height: 4.h),
               Text(
                 'Article title',
                 style: TextStyle(
@@ -40,7 +40,7 @@ class HeroWidget extends StatelessWidget {
                 ),
                 maxLines: 1,
               ),
-              const SizedBox(height: 4),
+              SizedBox(height: 4.h),
               Text(
                 'Body text goes here',
                 style: TextStyle(
