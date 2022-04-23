@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_it/get_it.dart';
-import 'package:twitter_ui_kit/src/components/root.dart';
 import 'package:twitter_ui_kit/src/di/service_locator.dart';
 import 'package:twitter_ui_kit/src/navigation/routes.dart';
 import 'package:twitter_ui_kit/src/routes/routes.dart';
@@ -27,7 +26,6 @@ class MyApp extends StatelessWidget {
         navigatorKey: GetIt.I.get<NavigationService>().navigatorKey,
         initialRoute: MobileRoutes.root,
         onGenerateRoute: routes,
-        home: const ComponentRootWidget(),
       ),
     );
   }

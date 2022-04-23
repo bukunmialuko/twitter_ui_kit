@@ -1,6 +1,17 @@
 class MobileRoutes {
   static const root = '/';
-  static const menuRoot = '/menuRoot';
-  static const imageryRoot = '/imageryRoot';
-  static const itemsRoot = '/itemsRoot';
+
+  static const appRootWidget = '/';
+
+  static const home = '/screens/home';
+
+  /// Components
+
+  static const components = '/components/';
+  static const menuRoot = '/components/menuRoot';
+  static const imageryRoot = '/components/imageryRoot';
+  static const itemsRoot = '/components/itemsRoot';
+  static const buttonsRoot = '/components/buttonsRoot';
+  static const inputRoot = '/components/inputRoot';
+  static const navigationRoot = '/components/navigationRoot';
 }
