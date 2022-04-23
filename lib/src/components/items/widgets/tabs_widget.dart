@@ -34,8 +34,8 @@ class TabsWidget extends StatelessWidget implements PreferredSizeWidget {
         ),
         controller: controller,
         padding: EdgeInsets.zero,
-        labelPadding: EdgeInsets.only(left: 12.w, right: 20.w),
-        indicatorPadding: EdgeInsets.only(left: 12.w, right: 20.w, bottom: 2.h),
+        labelPadding: EdgeInsets.only(left: 12.w, right: 8.w),
+        indicatorPadding: EdgeInsets.only(left: 12.w, right: 8.w, bottom: 2.h),
         tabs: tabs,
       ),
     );
