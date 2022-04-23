@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get_it/get_it.dart';
+import 'package:twitter_ui_kit/src/navigation/navigation_service.dart';
 
 import 'widgets/avatar_wrap_widget.dart';
 import 'widgets/followers_following_widget.dart';
 import 'widgets/menu_author_widget.dart';
 import 'widgets/menu_item_widget.dart';
 
-class MenuRoot extends StatefulWidget {
-  const MenuRoot({Key? key}) : super(key: key);
+class MenuRootWidget extends StatefulWidget {
+  const MenuRootWidget({Key? key}) : super(key: key);
 
   @override
-  State<MenuRoot> createState() => _MenuRootState();
+  State<MenuRootWidget> createState() => _MenuRootWidgetState();
 }
 
-class _MenuRootState extends State<MenuRoot> {
+class _MenuRootWidgetState extends State<MenuRootWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +26,12 @@ class _MenuRootState extends State<MenuRoot> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const AvatarWrapWidget(),
+              GestureDetector(
+                onTap: () {
+                  GetIt.I.get<NavigationService>().back();
+                },
+                child: const AvatarWrapWidget(),
+              ),
               SizedBox(height: 10.h),
               const MenuAuthorWidget(),
               SizedBox(height: 10.h),
