@@ -10,7 +10,12 @@ class AvatarWrapWidget extends StatelessWidget {
     return SizedBox(
       height: 68.h,
       child: Row(
-        children: const [ImageryWidget()],
+        children: [
+          ImageryWidget(
+            width: 48.w,
+            height: 48.w,
+          )
+        ],
       ),
     );
   }
