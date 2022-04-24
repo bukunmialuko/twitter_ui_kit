@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:twitter_ui_kit/src/components/navigation/widgets/footer_widget.dart';
 
+import '../../res/colors.dart';
 import 'widgets/page_widget.dart';
 import 'widgets/tab_extension.dart';
 
@@ -14,6 +15,9 @@ class NavigationRootWidget extends StatefulWidget {
 
 class _NavigationRootWidgetState extends State<NavigationRootWidget> {
   late Tabs currentTab;
+
+  final TextEditingController _searchController =
+      TextEditingController(text: '');
   @override
   void initState() {
     currentTab = Tabs.home;
@@ -35,9 +39,10 @@ class _NavigationRootWidgetState extends State<NavigationRootWidget> {
     //   ),
     // )
     return Scaffold(
-      // backgroundColor: AppColors.twitterBlack100,
-
-      appBar: PageWidget(),
+      backgroundColor: AppColors.twitterWhite100,
+      appBar: PageWidget(
+        searchController: _searchController,
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.only(left: 10.w),

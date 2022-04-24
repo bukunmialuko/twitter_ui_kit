@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get_it/get_it.dart';
 import 'package:twitter_ui_kit/src/components/buttons/widgets/twitter_button.dart';
 import 'package:twitter_ui_kit/src/res/colors.dart';
 
+import '../../navigation/navigation_service.dart';
 import '../../res/assets.dart';
 
 class TweetRootWidget extends StatelessWidget {
@@ -45,7 +47,9 @@ class TweetRootWidget extends StatelessWidget {
                         width: 50,
                         height: 40.h,
                         text: 'Tweet',
-                        onPressed: () {},
+                        onPressed: () {
+                          GetIt.I.get<NavigationService>().back();
+                        },
                       )
                     ],
                   ),
