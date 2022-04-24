@@ -5,7 +5,7 @@ class MobileRoutes {
 
   /// Screens
 
-  static const home = '/screens/home';
+  static const screens = '/screens/home';
   static const publishRoot = '/components/publishRoot';
 
   /// Components

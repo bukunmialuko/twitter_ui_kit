@@ -45,7 +45,7 @@ class AppRootWidget extends StatelessWidget {
             NavItemWidget(
               onClick: () {
                 GetIt.I.get<NavigationService>().to(
-                      routeName: MobileRoutes.publishRoot,
+                      routeName: MobileRoutes.screens,
                     );
               },
               title: 'App / Screens',

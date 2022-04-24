@@ -11,6 +11,7 @@ import 'package:twitter_ui_kit/src/root/root.dart';
 import '../components/items/root.dart';
 import '../components/menu/root.dart';
 import '../routes/routes.dart';
+import '../screens/root.dart';
 import '../screens/tweet/root.dart';
 import 'fade_route.dart';
 
@@ -22,6 +23,11 @@ var routes = (RouteSettings settings) {
       );
 
     /// Screens
+    case MobileRoutes.screens:
+      return FadeRoute(
+        page: const ScreensRootWidget(),
+      );
+
     case MobileRoutes.publishRoot:
       return FadeRoute(
         page: const TweetRootWidget(),
