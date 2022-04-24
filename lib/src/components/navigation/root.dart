@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:twitter_ui_kit/src/components/navigation/widgets/footer_widget.dart';
 
 import '../../res/colors.dart';
-import 'widgets/page_widget.dart';
+import 'widgets/feed_widget.dart';
 import 'widgets/tab_extension.dart';
 
 class NavigationRootWidget extends StatefulWidget {
@@ -40,9 +40,14 @@ class _NavigationRootWidgetState extends State<NavigationRootWidget> {
     // )
     return Scaffold(
       backgroundColor: AppColors.twitterWhite100,
-      appBar: PageWidget(
-        searchController: _searchController,
-      ),
+      // appBar: PageWidget(
+      //   searchController: _searchController,
+      // ),
+      // appBar: DiscoverWidget(
+      //   searchController: _searchController,
+      // ),
+
+      appBar: const FeedWidget(),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.only(left: 10.w),

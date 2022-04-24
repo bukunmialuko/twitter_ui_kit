@@ -18,4 +18,6 @@ class Assets {
 
   static const BOOKMARK = 'assets/svg/message.svg';
   static const BOOKMARK_SELECTED = 'assets/svg/message_selected.svg';
+
+  static const LOGO = 'assets/svg/logo.svg';
 }

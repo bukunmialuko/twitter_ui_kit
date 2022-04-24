@@ -9,10 +9,10 @@ import '../../../navigation/navigation_service.dart';
 import '../../../res/assets.dart';
 import '../../input/widget/input_widget.dart';
 
-class PageWidget extends StatelessWidget implements PreferredSizeWidget {
+class DiscoverWidget extends StatelessWidget implements PreferredSizeWidget {
   final TextEditingController searchController;
 
-  const PageWidget({Key? key, required this.searchController})
+  const DiscoverWidget({Key? key, required this.searchController})
       : super(key: key);
 
   @override
@@ -22,16 +22,11 @@ class PageWidget extends StatelessWidget implements PreferredSizeWidget {
       // color: Colors.red,
       child: AppBar(
         elevation: 0,
-        toolbarHeight: 35.h,
+        toolbarHeight: 48.h,
         backgroundColor: Colors.white,
-        title: Text(
-          'Page title',
-          style: TextStyle(
-            fontSize: 14.sp,
-            color: AppColors.twitterStale100,
-            fontStyle: FontStyle.normal,
-            fontWeight: FontWeight.w700,
-          ),
+        title: InputWidget(
+          controller: searchController,
+          width: 274.w,
         ),
         leading: GestureDetector(
           onTap: () {
@@ -54,19 +49,10 @@ class PageWidget extends StatelessWidget implements PreferredSizeWidget {
             color: AppColors.twitterStale100,
           ),
         ],
-        flexibleSpace: Align(
-          alignment: Alignment.bottomCenter,
-          child: Padding(
-            padding: EdgeInsets.only(bottom: 12.h),
-            child: InputWidget(
-              controller: searchController,
-            ),
-          ),
-        ),
       ),
     );
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(130.h);
+  Size get preferredSize => Size.fromHeight(108.h);
 }

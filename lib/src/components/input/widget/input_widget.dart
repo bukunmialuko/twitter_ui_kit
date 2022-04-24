@@ -5,9 +5,11 @@ import '../../../res/colors.dart';
 
 class InputWidget extends StatelessWidget {
   final Color? color;
+  final double? width;
   final TextEditingController controller;
 
-  const InputWidget({Key? key, required this.controller, this.color})
+  const InputWidget(
+      {Key? key, required this.controller, this.color, this.width})
       : super(key: key);
 
   @override
@@ -18,7 +20,7 @@ class InputWidget extends StatelessWidget {
       child: Center(
         child: Container(
           height: 28.h,
-          width: 356.w,
+          width: width ?? 356.w,
           decoration: BoxDecoration(
             color: color ?? AppColors.twitterGrey100,
             border: Border.all(color: color ?? AppColors.twitterGrey100),

@@ -7,13 +7,9 @@ import 'package:twitter_ui_kit/src/res/colors.dart';
 
 import '../../../navigation/navigation_service.dart';
 import '../../../res/assets.dart';
-import '../../input/widget/input_widget.dart';
 
-class PageWidget extends StatelessWidget implements PreferredSizeWidget {
-  final TextEditingController searchController;
-
-  const PageWidget({Key? key, required this.searchController})
-      : super(key: key);
+class FeedWidget extends StatelessWidget implements PreferredSizeWidget {
+  const FeedWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,14 +20,12 @@ class PageWidget extends StatelessWidget implements PreferredSizeWidget {
         elevation: 0,
         toolbarHeight: 35.h,
         backgroundColor: Colors.white,
-        title: Text(
-          'Page title',
-          style: TextStyle(
-            fontSize: 14.sp,
-            color: AppColors.twitterStale100,
-            fontStyle: FontStyle.normal,
-            fontWeight: FontWeight.w700,
-          ),
+        title: SvgPicture.asset(
+          Assets.LOGO,
+          width: 26.w,
+          height: 35.w,
+          fit: BoxFit.fill,
+          color: AppColors.twitterBlue100,
         ),
         leading: GestureDetector(
           onTap: () {
@@ -54,19 +48,10 @@ class PageWidget extends StatelessWidget implements PreferredSizeWidget {
             color: AppColors.twitterStale100,
           ),
         ],
-        flexibleSpace: Align(
-          alignment: Alignment.bottomCenter,
-          child: Padding(
-            padding: EdgeInsets.only(bottom: 12.h),
-            child: InputWidget(
-              controller: searchController,
-            ),
-          ),
-        ),
       ),
     );
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(130.h);
+  Size get preferredSize => Size.fromHeight(95.h);
 }
