@@ -18,7 +18,7 @@ class FeedWidget extends StatelessWidget implements PreferredSizeWidget {
       // color: Colors.red,
       child: AppBar(
         elevation: 0,
-        toolbarHeight: 35.h,
+        toolbarHeight: 35.w,
         backgroundColor: Colors.white,
         title: SvgPicture.asset(
           Assets.LOGO,
@@ -27,6 +27,7 @@ class FeedWidget extends StatelessWidget implements PreferredSizeWidget {
           fit: BoxFit.fitHeight,
           // color: AppColors.twitterBlue100,
         ),
+        centerTitle: true,
         leading: GestureDetector(
           onTap: () {
             GetIt.I.get<NavigationService>().back();
@@ -36,6 +37,7 @@ class FeedWidget extends StatelessWidget implements PreferredSizeWidget {
             child: ImageryWidget(
               width: 35.w,
               height: 35.w,
+              borderRadius: 35.w,
               color: AppColors.twitterGrey100,
             ),
           ),
@@ -53,5 +55,5 @@ class FeedWidget extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(60.h);
+  Size get preferredSize => Size.fromHeight(80.h);
 }

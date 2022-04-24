@@ -22,7 +22,7 @@ class PageWidget extends StatelessWidget implements PreferredSizeWidget {
       // color: Colors.red,
       child: AppBar(
         elevation: 0,
-        toolbarHeight: 35.h,
+        toolbarHeight: 35.w,
         backgroundColor: Colors.white,
         title: Text(
           'Page title',
@@ -33,6 +33,7 @@ class PageWidget extends StatelessWidget implements PreferredSizeWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
+        centerTitle: true,
         leading: GestureDetector(
           onTap: () {
             GetIt.I.get<NavigationService>().back();

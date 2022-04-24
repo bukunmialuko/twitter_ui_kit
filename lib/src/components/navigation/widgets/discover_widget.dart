@@ -22,12 +22,13 @@ class DiscoverWidget extends StatelessWidget implements PreferredSizeWidget {
       // color: Colors.red,
       child: AppBar(
         elevation: 0,
-        toolbarHeight: 48.h,
+        toolbarHeight: 48.w,
         backgroundColor: Colors.white,
         title: InputWidget(
           controller: searchController,
           width: 274.w,
         ),
+        centerTitle: true,
         leading: GestureDetector(
           onTap: () {
             GetIt.I.get<NavigationService>().back();
