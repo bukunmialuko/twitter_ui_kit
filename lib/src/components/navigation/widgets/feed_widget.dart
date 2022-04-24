@@ -22,10 +22,10 @@ class FeedWidget extends StatelessWidget implements PreferredSizeWidget {
         backgroundColor: Colors.white,
         title: SvgPicture.asset(
           Assets.LOGO,
-          width: 26.w,
-          height: 35.w,
-          fit: BoxFit.fill,
-          color: AppColors.twitterBlue100,
+          width: 20.w,
+          height: 25.h,
+          fit: BoxFit.fitHeight,
+          // color: AppColors.twitterBlue100,
         ),
         leading: GestureDetector(
           onTap: () {
