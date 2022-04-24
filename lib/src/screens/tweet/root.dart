@@ -6,8 +6,8 @@ import 'package:twitter_ui_kit/src/res/colors.dart';
 
 import '../../res/assets.dart';
 
-class PublishRootWidget extends StatelessWidget {
-  const PublishRootWidget({Key? key}) : super(key: key);
+class TweetRootWidget extends StatelessWidget {
+  const TweetRootWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
