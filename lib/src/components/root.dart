@@ -74,6 +74,16 @@ class ComponentRootWidget extends StatelessWidget {
             NavItemWidget(
               onClick: () {
                 GetIt.I.get<NavigationService>().to(
+                      routeName: MobileRoutes.publishRoot,
+                    );
+              },
+              title: 'Publish',
+              iconUri: 'assets/svg/list.svg',
+            ),
+            SizedBox(height: 10.h),
+            NavItemWidget(
+              onClick: () {
+                GetIt.I.get<NavigationService>().to(
                       routeName: MobileRoutes.inputRoot,
                     );
               },
