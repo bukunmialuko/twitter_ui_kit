@@ -5,6 +5,7 @@ import 'package:twitter_ui_kit/src/navigation/navigation_service.dart';
 import 'package:twitter_ui_kit/src/res/colors.dart';
 
 import '../components/items/widgets/nav_item_widget.dart';
+import '../res/assets.dart';
 import '../routes/routes.dart';
 
 class AppRootWidget extends StatelessWidget {
@@ -38,17 +39,17 @@ class AppRootWidget extends StatelessWidget {
                     );
               },
               title: 'Components',
-              iconUri: 'assets/svg/list.svg',
+              iconUri: Assets.LIST,
             ),
             SizedBox(height: 10.h),
             NavItemWidget(
               onClick: () {
                 GetIt.I.get<NavigationService>().to(
-                      routeName: MobileRoutes.imageryRoot,
+                      routeName: MobileRoutes.publishRoot,
                     );
               },
               title: 'App / Screens',
-              iconUri: 'assets/svg/list.svg',
+              iconUri: Assets.LIST,
             ),
           ],
         ),

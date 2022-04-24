@@ -5,13 +5,13 @@ import 'package:twitter_ui_kit/src/components/buttons/root.dart';
 import 'package:twitter_ui_kit/src/components/imagery/root.dart';
 import 'package:twitter_ui_kit/src/components/input/root.dart';
 import 'package:twitter_ui_kit/src/components/navigation/root.dart';
-import 'package:twitter_ui_kit/src/components/publish/root.dart';
 import 'package:twitter_ui_kit/src/components/root.dart';
 import 'package:twitter_ui_kit/src/root/root.dart';
 
 import '../components/items/root.dart';
 import '../components/menu/root.dart';
 import '../routes/routes.dart';
+import '../screens/publish/root.dart';
 import 'fade_route.dart';
 
 var routes = (RouteSettings settings) {
@@ -22,6 +22,10 @@ var routes = (RouteSettings settings) {
       );
 
     /// Screens
+    case MobileRoutes.publishRoot:
+      return FadeRoute(
+        page: const PublishRootWidget(),
+      );
 
     /// Components
     case MobileRoutes.components:
@@ -47,11 +51,6 @@ var routes = (RouteSettings settings) {
     case MobileRoutes.buttonsRoot:
       return FadeRoute(
         page: const ButtonsRootWidget(),
-      );
-
-    case MobileRoutes.publishRoot:
-      return FadeRoute(
-        page: const PublishRootWidget(),
       );
 
     case MobileRoutes.inputRoot:

@@ -4,17 +4,19 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:twitter_ui_kit/src/components/buttons/widgets/twitter_button.dart';
 import 'package:twitter_ui_kit/src/res/colors.dart';
 
+import '../../res/assets.dart';
+
 class PublishRootWidget extends StatelessWidget {
   const PublishRootWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     List<String> icons = [
-      'assets/svg/feed.svg',
-      'assets/svg/list.svg',
-      'assets/svg/discover.svg',
-      'assets/svg/bookmark.svg',
-      'assets/svg/message.svg',
+      Assets.FEED,
+      Assets.LIST,
+      Assets.DISCOVER,
+      Assets.BOOKMARK,
+      Assets.INBOX,
     ];
 
     return Scaffold(
@@ -49,7 +51,7 @@ class PublishRootWidget extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 5.h),
-                Divider(thickness: 1),
+                const Divider(thickness: 1),
               ],
             ),
             SizedBox(height: 20.h),
@@ -62,17 +64,17 @@ class PublishRootWidget extends StatelessWidget {
                     backgroundColor: AppColors.twitterGrey100,
                   ),
                   SizedBox(width: 10.h),
-                  Text("What's happening"),
+                  const Text("What's happening"),
                   // Container(width: 100, child: TextField())
                 ],
               ),
             ),
             SizedBox(height: 10.h),
-            Spacer(),
+            const Spacer(),
             Row(
               children: [
-                SizedBox(width: 20),
-                Container(
+                const SizedBox(width: 20),
+                SizedBox(
                   width: 200.w,
                   height: 40.h,
                   child: ListView.separated(
