@@ -26,7 +26,7 @@ class _NavigationRootWidgetState extends State<NavigationRootWidget> {
 
   @override
   Widget build(BuildContext context) {
-    // double x = 50 + MediaQuery.of(context).padding.bottom;
+    double x = 50 + MediaQuery.of(context).padding.bottom;
     // Container(
     //   width: x,
     //   height: x,

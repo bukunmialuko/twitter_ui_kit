@@ -38,6 +38,7 @@ class DiscoverWidget extends StatelessWidget implements PreferredSizeWidget {
             child: ImageryWidget(
               width: 35.w,
               height: 35.w,
+              borderRadius: 35.w,
               color: AppColors.twitterGrey100,
             ),
           ),
